@@ -1,4 +1,8 @@
-# # Welcome To Mohamed Marifa Bah Final Project Of Code Institute,
+#  Welcome To Mohamed Marifa Bah!
+
+# Full Stack Framework Milestone Final Project Of Code Institute.
+
+
 # Project Summary
 Project Purpose: In this project, I need to build a full-stack site based around business logic used to control a centrally-owned dataset. I need to set up an authentication mechanism and provide paid access to the site's data and/or other activities based on the dataset, such as the purchase of a product/service.
 
@@ -6,7 +10,7 @@ I have made a palm oil website where the owner displays thier hand made palm oil
 
 # UX
 
-# User Stories
+This platform has been built to be fully responsive so it works perfectly on any device and screen size.
 
 "As a customer, I would like to _______________"
 
@@ -30,7 +34,7 @@ jQuery 3.4.1
 
 In an effort to keep the JavaScript minimal, I have decided to use jQuery as foundation to my scripts framework.
 
-Django 1.11
+Django 1.11.24
 
 Django is a free and open-source web framework that I've used to render the back-end Python with the front-end Bootstrap. We were taught how to use Django 1.11 in the lessons, despite Django 2.0 being the current version,I used Django 1.11
 
@@ -40,7 +44,9 @@ Font Awesome
 
 Typography
 
-2 Google Fonts were used across the site: 'Liu Jian Mao Cao', cursive 'Quicksand', sans-serif
+Google Fonts were used across the site.
+
+Google images were used accross the site.
 
 
 # Features
@@ -123,11 +129,15 @@ The shopping cart page features a summary of all the items the user has added to
 Each list item includes a picture of the item, the item title and price.
 A quantity field is displayed with each cart item, giving the user the ability to adjust the quantity in their cart. Any time a quantity is adjusted the subtotal displayed is updated to reflect the change.
 
-.Checkout page
+
+Checkout page
+
 Each checkout page features an order summary, which lists all the items in the users cart, title, price and quantity.
 User need to populate their details like Name, contact no., delivery address and payment card details and then submit for payment.
 
+
 Blog Post Page
+
 Since it is a handmade palm oil website, interested users can share their write ups related to palm oil making and other stuffs related to palm oil here in this Blog page.
 No of views for each post will be automatically updated.
 Users can view others’ blogs too.
@@ -140,8 +150,8 @@ Review section for users for each product they buy.
 Checkout pages to include a field for customers to enter discount codes or coupons to adjust their final payment cost.
 User profile page will show more details like buying history of the user.
 
+
 # Technologies Used
-Languages:
 
 HTML
 
@@ -164,6 +174,8 @@ Font Awesome
 Stripe
 
 Bootstrap
+
+Travis
 
 # Tools:
 
@@ -229,7 +241,7 @@ If possible open a terminal session in the unzip folder or cd to the correct loc
 
 Install all required modules with the command
 
-pip -r requirements.txt.
+pip3 -r requirements.txt.
 Attempt to run project where you will get an error message displaying your host name.
 python3 manage.py runserver 
 In your settings.py file add your hostname under 'ALLOWED_HOSTS'.
@@ -304,8 +316,7 @@ In the "Manual Deployment" section of this page, made sure the master branch is 
 
 The site is now successfully deployed.
 
-# Content
-www.beadinggem.com for post contents
+
 
 # Acknowledgements
 
