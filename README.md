@@ -4,11 +4,14 @@
 
 
 # Project Summary
+
 Project Purpose: In this project, I need to build a full-stack site based around business logic used to control a centrally-owned dataset. I need to set up an authentication mechanism and provide paid access to the site's data and/or other activities based on the dataset, such as the purchase of a product/service.
 
 I have made a palm oil website where the owner displays thier hand made palm oil.They maintains a blog where they provides users tips and instructions to make Palm Oil productions.Users can also write and share their blogs here.Users can buy palm oil if they like.If they want some sweet palm oil,they can contact the owner with the details of their requirements.
 
+
 # UX
+
 
 This platform has been built to be fully responsive so it works perfectly on any device and screen size.
 
