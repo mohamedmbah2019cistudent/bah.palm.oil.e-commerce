@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+
+<section class="mt-5 mb-5 pt-5 pb-5 text-center">
+        <div class="container about-page">
+          <h1 class="jumbotron-heading" >Thank you </h1>
+          <p class="lead text-muted">Clink Different</p>
+          <p class="pb-5"><h2 style="color:#D5BF8E"> WE HOPE YOU ENJOY THE PALM OIL</h2></p>
+          <p class="pb-5"><h5 style="color:#D5BF8E"> WELLCOME BACK </h5></p>
+          <p>
+            <hr>
+            <br>
+            <a href="{% url 'get_posts' %}" class="btn btn-dark rounded-0 btn-sm my-2"> PalmOilFruit</a>
+            <a href="{% url 'all_products2' %}" class="btn btn-dark rounded-0 btn-sm my-2"> PalmOils</a>
+          </p>
+        </div>
+</section>
+
+{% endblock %}

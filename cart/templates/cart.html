@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+{% load static from staticfiles %}
+{% load bootstrap_tags %}
+
+{% block content %}
+
+<div class="container mb-5">
+      <div class="py-5 text-center">
+        <h2>Your Cart</h2>
+      </div>
+
+
+    <table class="table">
+      <thead class="thead-dark">
+        <tr>
+        
+          <th scope="col">Product</th>
+          <th scope="col"></th>
+          <th scope="col">Price</th>
+          <th scope="col">Items Added</th>
+          <th scope="col">Change Quantity</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for item in cart_items %}  
+            <tr>
+                  <td><img src="{{MEDIA_URL}}{{item.product.image}}" class="card-img-top product-image" alt="{{product.name}}" style="width: 3em;" /></td>
+                  <td>{{ item.product.name }}</td>
+                  <td>€ {{ item.product.price }}</td>
+                  <td> {{ item.quantity }} </td>
+                  <td><form class="form-inline" method="post" action="{% url 'adjust_cart' item.id %}">
+                            {% csrf_token %}
+                            <div class="form-group">
+                                <div class="input-group">
+                                    <input class="input-cart" name="quantity" type="number" min="0" max="999" class="form-control" value="{{item.quantity}}" >
+                                    <button type="submit" class="btn btn-dark btn-sm"><span class="glyphicon glyphicon-edit" aria-hidden="true"></span>Change Quantity</button>
+                                </div>
+                            </div>
+                    </form></td>
+            </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+    
+    <div class="p-3 mb-2 bg-light text-dark justify-content-end div-checkout-pay">
+        <p class="ml-auto">Total: <strong>€  {{ total }} </strong></p>
+        <a href="{% url 'checkout' %}" class="btn btn-dark" role="button"><span class="glyphicon glyphicon-ok-sign" aria-hidden="true"></span>Checkout</a>
+    </div>
+</div>
+
+{% endblock %}
+
+
+
+                

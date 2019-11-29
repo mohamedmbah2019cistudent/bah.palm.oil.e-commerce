@@ -41,7 +41,13 @@ INSTALLED_APPS = [
     'crispy_forms',
     'accounts',
     'products',
+    'cart',
+    'search',
+    'checkout',
     'posts',
+    'home',
+    'contact',
+    'storages',
 ]
 
 MIDDLEWARE = [
@@ -68,6 +74,7 @@ TEMPLATES = [
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
                 'django.template.context_processors.media',
+                'cart.contexts.cart_contents',
             ],
         },
     },
@@ -79,12 +86,16 @@ WSGI_APPLICATION = 'eCommerce.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/1.11/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+if "DATABASE_URL" in os.environ:
+    DATABASES = {'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))}
+else:
+    print("Database URL not found. Using SQLite instead")
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        }
     }
-}
 
 
 # Password validation
@@ -128,6 +139,13 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
 
 STATIC_URL = '/static/'
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, "static"),
+)
+
+STRIPE_PUBLISHABLE = os.getenv('STRIPE_PUBLISHABLE')
+STRIPE_SECRET = os.getenv('STRIPE_SECRET')
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
