@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<div class="container">
+  <hr>
+  <!-- Sidebar Widgets Column -->
+  <nav class="navbar navbar-expand-lg navbar-dark primary-color">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav nav-fill w-100">
+        <li class="nav-item">
+          <a href="{% url 'all_products2' %}"> PalmOils </a>
+        </li>
+        <li class="nav-item">
+          <a href="{% url 'about' %}"> About BaheCommerce </a>
+        </li>
+        <li class="nav-item">
+          <a href="{% url 'get_posts' %}"> Our PalmOilFruit</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <br>
+  <div class="card-deck ">
+    {% for post in posts|slice:":4" %}
+    <div class="col-lg-3 col-md-6 col-xs-12 header-first text-center mx-auto">
+      <div class="card border-0 text-center">
+
+        <a href="{% url 'post_detail' post.id %}" class="image-blogpost-link">
+
+          <img src="{{MEDIA_URL}}{{post.image}}" class="img-fluid pb-4"></a>
+        <div class="block3-txt">
+          <h5 class="">
+            <a href="{% url 'post_detail' post.id %}" class="title-product-link">{{ post.title }}</a>
+          </h5>
+          <p class="s-text8">
+            {{ post.content|truncatewords:10 }}
+          </p>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+{% endblock %}

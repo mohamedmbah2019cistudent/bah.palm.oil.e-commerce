@@ -1,0 +1,29 @@
+{% extends 'base.html' %} 
+
+{% load bootstrap_tags %}
+
+{% block page_title %}Login Page{% endblock %} 
+
+{% block content %}
+<div class="container-fluid parallax"></div>
+  
+<div class="container">
+      <div class="py-5 text-center">
+        <h2>Login</h2>
+        <p class="lead">Please fill up the details below to Login to BaheCommerce.</p>
+        <p>If you don not have an account with us, you can <a href="{% url 'registration' %}">Register in here</a></p>
+      </div>
+      <div class="row">
+           <div class="col-xs-12 col-md-6 col-lg-4 col-centered">
+             <form method="POST">
+                 {% csrf_token %} {{ login_form | as_bootstrap}}
+                 <button type="submit" class="btn btn-dark rounded-0" >Login</button>
+             </form>
+             
+             <p><a href="{% url 'password_reset' %}">Reset Password</a></p>
+           </div>
+       </div>
+</div>
+
+
+{% endblock %}

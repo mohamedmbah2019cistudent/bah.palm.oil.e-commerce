@@ -2,19 +2,18 @@
 # Project Summary
 Project Purpose: In this project, I need to build a full-stack site based around business logic used to control a centrally-owned dataset. I need to set up an authentication mechanism and provide paid access to the site's data and/or other activities based on the dataset, such as the purchase of a product/service.
 
-I have made a jewelry website where the owner displays her hand made jewelries.She maintains a blog where she provides users tips and instructions to make DIY projects on jewelry.Users can also write and share their blogs here.Users can buy jewelry if they like.If they want some customised jewelry,they can contact the owner with the details of their requirements.
+I have made a palm oil website where the owner displays thier hand made palm oil.They maintains a blog where they provides users tips and instructions to make Palm Oil productions.Users can also write and share their blogs here.Users can buy palm oil if they like.If they want some sweet palm oil,they can contact the owner with the details of their requirements.
 
 # UX
 # User Stories
 "As a customer, I would like to _______________"
 
 view the site from any device (mobile, tablet, desktop).
-get a jewelry website that can be searched by category, similar items and using text search, making it easy to find specific things or enjoy browsing categories that interest me
+get a palm oil website that can be searched by category, similar product and using text search, making it easy to find specific things or enjoy browsing categories that interest me
 payment procedure should be easy to handle
-have a jewelry website where I can get new designs, fun to wear
-have a jewelry website where I can get custom designed jewelry
-have a jewelry website where I can order customized gift
-Design
+have a palm oil website where I can get new food stuff.
+have a palm oil website where I can get my frying oil and cooking oil
+# Design
 Color Scheme
 Since the website sells jewelry, I chose bright, vibrant colors.
 Framework
@@ -27,8 +26,7 @@ Icons
 Font Awesome 5.8.2
 Typography
 2 Google Fonts were used across the site: 'Liu Jian Mao Cao', cursive 'Quicksand', sans-serif
-Wireframes
-I've used pen and paper to create my wireframe / mock-up. All my wireframes can be found in the following link here
+
 
 # Features
 Base template (navbar & footer)
@@ -78,7 +76,7 @@ Checkout page
 Each checkout page features an order summary, which lists all the items in the users cart, title, price and quantity.
 User need to populate their details like Name, contact no., delivery address and payment card details and then submit for payment.
 Blog Post Page
-Since it is a handmade jewelry website, interested users can share their write ups related to jewelry making and other stuffs related to jewelry here in this Blog page.
+Since it is a handmade palm oil website, interested users can share their write ups related to palm oil making and other stuffs related to palm oil here in this Blog page.
 No of views for each post will be automatically updated.
 Users can view others’ blogs too.
 Edit/Delete options are there for logged in users
@@ -146,22 +144,22 @@ To run this project on your own IDE follow the instructions below:
 
 Ensure you have the following tools:
 
-An IDE such as AWS C9
+An IDE such as gitpod C9
 The following must be installed on your machine:
 
 PIP
 Python 3
 Git
 Instructions
-Save a copy of the github repository located at https://github.com/debapriya9b/onlineShop by clicking the "download zip" button at the top of the page and extracting the zip file to your chosen folder. If you have Git installed on your system, you can clone the repository with the following command.
-git clone https://github.com/debapriya9b/onlineShop
+Save a copy of the github repository located at https://github.com/by clicking the "download zip" button at the top of the page and extracting the zip file to your chosen folder. If you have Git installed on your system, you can clone the repository with the following command.
+git clone https://github.com/
 If possible open a terminal session in the unzip folder or cd to the correct location.
 
 Install all required modules with the command
 
 pip -r requirements.txt.
 Attempt to run project where you will get an error message displaying your host name.
-python3 manage.py runserver $IP:$PORT
+python3 manage.py runserver 
 In your settings.py file add your hostname under 'ALLOWED_HOSTS'.
 
 Create a stripe account and get your API keys.
@@ -217,9 +215,9 @@ In the "Manual Deployment" section of this page, made sure the master branch is 
 
 The site is now successfully deployed.
 
-Content
+# Content
 www.beadinggem.com for post contents
-Acknowledgements
+# Acknowledgements
 The tutors, mentors and support staff at Code Institute
 Mini Projects learnt from Code Institute
 Django docs

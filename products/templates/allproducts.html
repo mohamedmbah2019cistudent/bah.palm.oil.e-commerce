@@ -1,0 +1,73 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<section class="products-showcase">
+  <div class="container">
+    <div class="wrapper">
+      <div class="main">
+        <form  action="{% url 'search' %}" method="get">
+        <input type="text" name="q" type="search" placeholder="Search...">
+        <button type="search">Search</button>
+      </form>
+      </div>
+    </div>
+    <div class="row row-header card-columns justify-content-center">
+      <div class="card-deck">
+        {% if not products %}
+        <div>
+          <p>No Products found</p>
+        </div>
+        {% else %}
+        {% for product in products %}
+        <div data-aos="fade-up" class="col-xs-12 col-md-6 col-lg-3 header-first">
+          <div class="card border-0 text-center" style="width: 21rem;">
+            <a href="{% url 'product_detail' product.id %}" class="image-product-link"><img src="{{MEDIA_URL}}{{product.image}}" class="card-img-top product-image" alt="{{product.name}}" /></a>
+            <div class="card-body">
+              <h5 class="card-title product-name"><a href="{% url 'product_detail' product.id %}" class="title-product-link">{{ product.name }}</a></h5>
+              <p class="product-price">{{ product.price }}Sek</p>
+            </div>
+            <form method="post" action="{% url 'add_to_cart' product.id %}">
+              {% csrf_token %}
+              <div class="input-group add-checkout-div">
+                <tr>
+                  <th><label for="id_quantity">Quantity:</label></th>
+                  <td><select name="quantity" id="id_quantity">
+                      <option value="1">1</option>
+
+                      <option value="2">2</option>
+
+                      <option value="3">3</option>
+
+                      <option value="4">4</option>
+
+                      <option value="5">5</option>
+
+                      <option value="6">6</option>
+
+                      <option value="7">7</option>
+
+                      <option value="8">8</option>
+
+                      <option value="9">9</option>
+
+                      <option value="10">10</option>
+
+                    </select><input type="hidden" name="update" value="False" id="id_update" /></td>
+                </tr>
+                <span class="input-group-btn">
+                  <button class="btn btn-dark rounded-0 btn-sm" type="submit">Add to Cart</button>
+                </span>
+              </div>
+            </form>
+            <br>
+          </div>
+          <br>
+        </div>
+        {% endfor %}
+        {% endif %}
+      </div>
+    </div>
+</section>
+
+{% endblock %}

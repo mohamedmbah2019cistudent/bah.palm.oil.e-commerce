@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container">
+  <div class="row">
+    <!-- Post Content Column -->
+    <div class="col-lg-8 mb-5">
+      <h1 class="mt-4"> {{ post.title }} </h1>
+      <nav class="navbar navbar-expand-lg navbar-dark primary-color">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav nav-fill w-100">
+            <li class="nav-item">
+              <a href="{% url 'all_products2' %}"> PalmOils </a>
+            </li>
+            <li class="nav-item">
+              <a href="{% url 'about' %}"> About BaheCommerce </a>
+            </li>
+            <li class="nav-item">
+              <a href="{% url 'get_posts' %}"> Our PalmOilFruit</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <hr>
+      {% if post.image %}
+      <img class="img-fluid img-blogpost" src="/media/{{ post.image }}">
+      {% endif %}
+      <p class=""> {{ post.content }} </p>
+      <blockquote class="blockquote">
+        <p class="mb-0">Sweet palm oil requires a good cook to cook the palm oil with a delecious meal , a wise man to watch over it, a lucid poet to make
+          it, and enjoy your meal.</p>
+        <footer class="blockquote-footer">Artist
+          <cite title="Source Title">K Man </cite>
+        </footer>
+      </blockquote>
+      <a href="{% url 'get_posts' %}" class="btn btn-dark rounded-0">More of Our PalmOilFruits</a>
+      <a href="{% url 'all_products2' %}" class="btn btn-dark rounded-0">PalmOils</a>
+      <a href="{% url 'index' %}" class="btn btn-dark rounded-0">Home</a>
+    </div>
+  </div>
+</div>
+{% endblock %}

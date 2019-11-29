@@ -1,0 +1,70 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container-fluid parallax"></div>
+<!--product detail page-->
+<section class="mt-5 mb-5 container">
+  <hr>
+  <div data-aos="fade-up" class="container dark-grey-text mt-5">
+    <div class="row wow fadeIn">
+      <div class="col-md-4 mb-4">
+        {% if product.image %}
+        <img class="img-fluid rounded img-blogpost" src="/media/{{ product.image }}">
+        {% endif %}
+      </div>
+      <div class="col-md-8 mb-4">
+        <div class="p-4">
+          <p class="lead font-weight-bold">{{ product.name }}</p>
+          <p class="lead">
+            <span> {{ product.price }} sek</span>
+          </p>
+          <p>{{ product.description }}</p>
+          <form method="post" action="{% url 'add_to_cart' product.id %}">
+            {% csrf_token %}
+            <div class="input-group add-checkout-div-product">
+              <tr>
+                <th><label for="id_quantity">Quantity:</label></th>
+                <td><select name="quantity" id="id_quantity">
+                    <option value="1">1</option>
+
+                    <option value="2">2</option>
+
+                    <option value="3">3</option>
+
+                    <option value="4">4</option>
+
+                    <option value="5">5</option>
+
+                    <option value="6">6</option>
+
+                    <option value="7">7</option>
+
+                    <option value="8">8</option>
+
+                    <option value="9">9</option>
+
+                    <option value="10">10</option>
+
+                  </select><input type="hidden" name="update" value="False" id="id_update" /></td>
+              </tr>
+              <span class="input-group-btn">
+                <button class="btn btn-dark rounded-0 btn-sm" type="submit">Add to Cart</button></span>
+            </div>
+          </form>
+        </div>
+        <a href="{% url 'add_review' product.id %}" class="btn btn-dark review-btn"> Leave a review </a>
+      </div>
+    </div>
+    <div class="col-xs-12 col-sm-6 col-md-6">
+      <span class="sort-inline review-inner-header">Reviews</span>
+      <hr class="hr-dark-grey" />
+      {% for review in reviews %}
+      <div>
+        <p>{{ review.rating }} <i class="fa fa-star star-color" aria-hidden="true"></i> - {{ review.user_name | upper }}</p>
+        <p>{{ review.comment }} </p>
+        <hr />
+      </div>
+      {% endfor %}
+    </div>
+    <hr>
+</section>
+{% endblock %}
