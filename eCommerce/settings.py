@@ -178,4 +178,4 @@ EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_PASS')
 
 CRISPY_TEMPLATE_PACK = "bootstrap4"
 
-#MESSAGE_STORAGE = 'django.contrib.messages.storage.session.SessionStorage'
+MESSAGE_STORAGE = 'django.contrib.messages.storage.session.SessionStorage'
