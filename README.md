@@ -4,6 +4,7 @@
 
 # Full Stack Framework Milestone Final Project Of Code Institute.
 
+# https://bah-ecommerce.herokuapp.com/
 
 # Project Summary
 
@@ -240,8 +241,8 @@ Python 3
 Git
 
 Instructions
-Save a copy of the github repository located at https://github.com/by clicking the "download zip" button at the top of the page and extracting the zip file to your chosen folder. If you have Git installed on your system, you can clone the repository with the following command.
-git clone https://github.com/
+Save a copy of the github repository located at https://github.com/mohamedmbah2019cistudent/bah_eCommerce by clicking the "download zip" button at the top of the page and extracting the zip file to your chosen folder. If you have Git installed on your system, you can clone the repository with the following command.
+git clone https://mohamedmbah2019cistudent.github.io/bah_eCommerce/
 If possible open a terminal session in the unzip folder or cd to the correct location.
 
 Install all required modules with the command
