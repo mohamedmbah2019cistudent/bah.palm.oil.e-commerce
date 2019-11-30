@@ -1,4 +1,4 @@
-language: python
+language: python3
 python:
 - "3.4"
 install: "pip3 install -r requirements.txt"
