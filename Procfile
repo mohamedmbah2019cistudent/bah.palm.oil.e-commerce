@@ -1,1 +1,1 @@
-web: gunicorn bah_eCommerce.wsgi:application
+web: gunicorn palmoil_eCommerce.wsgi:application
