@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/mohamedmbah2019cistudent/bah_eCommerce.svg?branch=master)](https://travis-ci.org/mohamedmbah2019cistudent/bah_eCommerce)
+
 #  Welcome To Mohamed Marifa Bah!
 
 # Full Stack Framework Milestone Final Project Of Code Institute.
