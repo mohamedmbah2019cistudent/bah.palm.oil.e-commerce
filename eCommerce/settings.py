@@ -27,7 +27,9 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['bah-ecommerce.herokuapp.com']
+ALLOWED_HOSTS = [os.environ.get('C9_HOSTNAME'),
+                 '127.0.0.1:8000',
+                 'bah-ecommerce.herokuapp.com']
 
 
 # Application definition
@@ -178,4 +180,4 @@ EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_PASS')
 
 CRISPY_TEMPLATE_PACK = "bootstrap4"
 
-#MESSAGE_STORAGE = 'django.contrib.messages.storage.session.SessionStorage'
+MESSAGE_STORAGE = 'django.contrib.messages.storage.session.SessionStorage'
